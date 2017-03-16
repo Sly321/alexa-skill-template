@@ -12,23 +12,19 @@ function handleError(err) {
 gulp.task('compile-ts', ['compile-src', 'compile-test']);
 
 gulp.task('compile-src', function () {
+    var tsProject = tsc.createProject('./tsconfig.json');
     return gulp.src(['./src/*.ts'])
-        .pipe(tsc({
-            module: "commonjs",
-            target: "ES5"
-        }))
+        .pipe(tsProject())
         .on('error', util.log)
-        .pipe(gulp.dest('./src'));
+        .pipe(gulp.dest('./src/'));
 });
 
 gulp.task('compile-test', function () {
-    return gulp.src(['./test/**/*.ts'])
-        .pipe(tsc({
-            module: "amd",
-            target: "ES5"
-        }))
+    var tsProject = tsc.createProject('./tsconfig.json');
+    return gulp.src(['./test/*.ts'])
+        .pipe(tsProject())
         .on('error', util.log)
-        .pipe(gulp.dest('./test'));
+        .pipe(gulp.dest('./test/'));
 });
 
 gulp.task('test', function () {
