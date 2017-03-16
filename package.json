@@ -1,0 +1,34 @@
+{
+  "name": "alexa-skill-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sly321/alexa-skill-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sly321/alexa-skill-template/issues"
+  },
+  "homepage": "https://github.com/Sly321/alexa-skill-template#readme",
+  "dependencies": {
+    "alexa-sdk": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/chai": "^3.4.35",
+    "@types/mocha": "^2.2.40",
+    "@types/node": "^7.0.8",
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^4.1.0",
+    "gulp-typescript": "^3.1.6",
+    "mocha": "^3.2.0",
+    "run-sequence": "^1.2.2",
+    "typescript": "^2.2.1"
+  }
+}
